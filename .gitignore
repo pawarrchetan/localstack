@@ -1,2 +1,7 @@
 localstack-s3/node_modules
 localstack-s3/.localstack
+
+localstack-lambda/__pycache__
+localstack-lambda/.localstack
+localstack-lambda/.serverless
+localstack-lambda/node_modules
