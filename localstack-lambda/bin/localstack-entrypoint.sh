@@ -11,11 +11,15 @@ set -x
 aws configure set default.region us-east-1
 aws configure set region us-east-1 --profile localstack
 
-echo "[localstack]" > ~/.aws/credentials
+#Backup aws configs
+cp ~/.aws/config ~/.aws/config-bkp
+cp ~/.aws/credentials ~/.aws/credentials-bkp
+
+echo "[localstack]" >> ~/.aws/credentials
 echo "aws_access_key_id = foo" >> ~/.aws/credentials
 echo "aws_secret_access_key = bar" >> ~/.aws/credentials
 
-echo "[localstack]" > ~/.aws/config
+echo "[localstack]" >> ~/.aws/config
 echo "region = us-east-1" >> ~/.aws/config
 echo "output = json" >> ~/.aws/config
 
